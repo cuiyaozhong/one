@@ -420,7 +420,7 @@ under the License.
         <version>${mercuryMp3Version}</version>
     </dependency>
       
-      <!--  Mercury test dependencies -->
+      <!--  Mercury Test dependencies -->
       <dependency>
         <groupId>org.apache.maven.mercury</groupId>
         <artifactId>mercury-repo-local-m2</artifactId>

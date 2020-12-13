@@ -6,7 +6,7 @@ spring:
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
       url: jdbc:mysql://127.0.0.1:3306/testdb?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
-      username: test
+      username: Test
       password: 123456
       # 初始化大小，最小，最大
       initialSize: 5
@@ -72,9 +72,9 @@ spring:
 
 
 
-#    name: test  #数据库名
+#    name: Test  #数据库名
 #    url: jdbc:mysql://localhost:3306/testdb #url
-#    username: test  #用户名
+#    username: Test  #用户名
 #    password: 123456  #密码
 #    driver-class-name: com.mysql.cj.jdbc.Driver  #数据库链接驱动
 

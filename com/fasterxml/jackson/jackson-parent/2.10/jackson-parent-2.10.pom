@@ -85,7 +85,7 @@
         <artifactId>junit</artifactId>
         <version>${version.junit}</version>
         <!-- 06-Sep-2017, tatu: As per [#6], forcing scope here can be problematic so remove
-        <scope>test</scope>
+        <scope>Test</scope>
           -->
       </dependency>
     </dependencies>

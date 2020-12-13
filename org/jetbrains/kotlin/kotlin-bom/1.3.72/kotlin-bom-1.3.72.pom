@@ -92,7 +92,7 @@
                 <artifactId>kotlin-osgi-bundle</artifactId>
                 <version>${kotlin.version}</version>
             </dependency>
-            <!-- kotlin.test -->
+            <!-- kotlin.Test -->
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>kotlin-test</artifactId>

@@ -1,30 +1,31 @@
 package com.example.one.mapper;
 
-import com.example.one.bean.test;
-import com.example.one.bean.testExample;
-import java.util.List;
+import com.example.one.bean.Test;
+import com.example.one.bean.TestExample;
 import org.apache.ibatis.annotations.Param;
 
-public interface testMapper {
-    int countByExample(testExample example);
+import java.util.List;
 
-    int deleteByExample(testExample example);
+public interface testMapper {
+    int countByExample(TestExample example);
+
+    int deleteByExample(TestExample example);
 
     int deleteByPrimaryKey(Integer id);
 
-    int insert(test record);
+    int insert(Test record);
 
-    int insertSelective(test record);
+    int insertSelective(Test record);
 
-    List<test> selectByExample(testExample example);
+    List<Test> selectByExample(TestExample example);
 
-    test selectByPrimaryKey(Integer id);
+    Test selectByPrimaryKey(Integer id);
 
-    int updateByExampleSelective(@Param("record") test record, @Param("example") testExample example);
+    int updateByExampleSelective(@Param("record") Test record, @Param("example") TestExample example);
 
-    int updateByExample(@Param("record") test record, @Param("example") testExample example);
+    int updateByExample(@Param("record") Test record, @Param("example") TestExample example);
 
-    int updateByPrimaryKeySelective(test record);
+    int updateByPrimaryKeySelective(Test record);
 
-    int updateByPrimaryKey(test record);
+    int updateByPrimaryKey(Test record);
 }

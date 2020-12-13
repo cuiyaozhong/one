@@ -243,7 +243,7 @@ See the Apache License Version 2.0 for the specific language governing permissio
           </executions>
         </plugin>
         <!--
-         | Package OSGi manifest in final JAR, also create a JAR of the test classes
+         | Package OSGi manifest in final JAR, also create a JAR of the Test classes
         -->
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>

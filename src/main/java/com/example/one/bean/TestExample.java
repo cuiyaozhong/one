@@ -3,14 +3,14 @@ package com.example.one.bean;
 import java.util.ArrayList;
 import java.util.List;
 
-public class testExample {
+public class TestExample {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public testExample() {
+    public TestExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 

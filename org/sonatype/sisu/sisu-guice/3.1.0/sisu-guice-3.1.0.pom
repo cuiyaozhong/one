@@ -93,7 +93,7 @@
             <exclude>org.slf4j:slf4j-api</exclude>
           </classpathDependencyExcludes>
           <!--
-           | This test needs updating for use with Maven
+           | This Test needs updating for use with Maven
           -->
           <excludes>
             <exclude>**/OSGiContainerTest*</exclude>

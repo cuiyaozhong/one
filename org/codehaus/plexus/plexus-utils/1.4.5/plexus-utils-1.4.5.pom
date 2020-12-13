@@ -23,7 +23,7 @@
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
         <configuration>
-          <!-- required to ensure the test classes are used, not surefire's plexus-utils -->
+          <!-- required to ensure the Test classes are used, not surefire's plexus-utils -->
           <childDelegation>true</childDelegation>
           <excludes>
             <exclude>org/codehaus/plexus/util/FileBasedTestCase.java</exclude>

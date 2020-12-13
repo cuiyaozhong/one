@@ -197,7 +197,7 @@ target platform and specify -Dntdll_target=msbuild on the mvn command line.
               <goal>run</goal>
             </goals>
           </execution>
-          <!--   create tests/output prior to test run    -->
+          <!--   create tests/output prior to Test run    -->
           <execution>
             <phase>test-compile</phase>
             <id>mkdir_tests_output</id>

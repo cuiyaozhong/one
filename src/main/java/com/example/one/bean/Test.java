@@ -1,6 +1,6 @@
 package com.example.one.bean;
 
-public class test {
+public class Test {
     private Integer id;
 
     private String name;
