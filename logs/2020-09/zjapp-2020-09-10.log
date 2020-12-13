@@ -1,0 +1,105 @@
+[TID: ] 2020-09-10 16:44:14.631 INFO  --- [StartupInfoLogger.java:55] [main] - Starting OneApplication on cuiyaozhongdeMacBook-Pro.local with PID 4402 (/Users/cuiyaozhong/software/ideapace/one/target/classes started by cuiyaozhong in /Users/cuiyaozhong/software/ideapace/one)
+[TID: ] 2020-09-10 16:44:14.635 DEBUG --- [StartupInfoLogger.java:56] [main] - Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+[TID: ] 2020-09-10 16:44:14.636 INFO  --- [SpringApplication.java:651] [main] - No active profile set, falling back to default profiles: default
+[TID: ] 2020-09-10 16:44:15.655 INFO  --- [RepositoryConfigurationDelegate.java:249] [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+[TID: ] 2020-09-10 16:44:15.659 INFO  --- [RepositoryConfigurationDelegate.java:127] [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[TID: ] 2020-09-10 16:44:15.694 INFO  --- [RepositoryConfigurationDelegate.java:187] [main] - Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+[TID: ] 2020-09-10 16:44:15.969 INFO  --- [PostProcessorRegistrationDelegate.java:335] [main] - Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[TID: ] 2020-09-10 16:44:16.125 INFO  --- [PostProcessorRegistrationDelegate.java:335] [main] - Bean 'spring.datasource.druid-com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties' of type [com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[TID: ] 2020-09-10 16:44:16.132 INFO  --- [PostProcessorRegistrationDelegate.java:335] [main] - Bean 'advisor' of type [org.springframework.aop.support.RegexpMethodPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[TID: ] 2020-09-10 16:44:16.402 INFO  --- [TomcatWebServer.java:91] [main] - Tomcat initialized with port(s): 8080 (http)
+[TID: ] 2020-09-10 16:44:16.510 INFO  --- [ServletWebServerApplicationContext.java:284] [main] - Root WebApplicationContext: initialization completed in 1810 ms
+[TID: ] 2020-09-10 16:44:16.636 INFO  --- [DruidDataSourceAutoConfigure.java:56] [main] - Init DruidDataSource
+[TID: ] 2020-09-10 16:44:16.957 INFO  --- [DruidDataSource.java:1010] [main] - {dataSource-1} inited
+[TID: ] 2020-09-10 16:44:17.566 INFO  --- [PropertySourcedRequestMappingHandlerMapping.java:69] [main] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[TID: ] 2020-09-10 16:44:17.690 INFO  --- [ExecutorConfigurationSupport.java:181] [main] - Initializing ExecutorService 'applicationTaskExecutor'
+[TID: ] 2020-09-10 16:44:17.758 INFO  --- [WelcomePageHandlerMapping.java:58] [main] - Adding welcome page template: index
+[TID: ] 2020-09-10 16:44:17.986 INFO  --- [DocumentationPluginsBootstrapper.java:151] [main] - Context refreshed
+[TID: ] 2020-09-10 16:44:18.005 INFO  --- [DocumentationPluginsBootstrapper.java:154] [main] - Found 1 custom documentation plugin(s)
+[TID: ] 2020-09-10 16:44:18.059 INFO  --- [ApiListingReferenceScanner.java:41] [main] - Scanning for api listing references
+[TID: ] 2020-09-10 16:44:18.202 INFO  --- [TomcatWebServer.java:203] [main] - Tomcat started on port(s): 8080 (http) with context path ''
+[TID: ] 2020-09-10 16:44:18.206 INFO  --- [StartupInfoLogger.java:61] [main] - Started OneApplication in 4.133 seconds (JVM running for 4.945)
+[TID: ] 2020-09-10 16:44:26.649 INFO  --- [FrameworkServlet.java:525] [http-nio-8080-exec-1] - Initializing Servlet 'dispatcherServlet'
+[TID: ] 2020-09-10 16:44:26.657 INFO  --- [FrameworkServlet.java:547] [http-nio-8080-exec-1] - Completed initialization in 7 ms
+[TID: ] 2020-09-10 16:44:26.710 ERROR --- [DirectJDKLog.java:175] [http-nio-8080-exec-1] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Cannot get Jedis connection; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool] with root cause
+redis.clients.jedis.exceptions.JedisDataException: ERR Client sent AUTH, but no password is set
+	at redis.clients.jedis.Protocol.processError(Protocol.java:132)
+	at redis.clients.jedis.Protocol.process(Protocol.java:166)
+	at redis.clients.jedis.Protocol.read(Protocol.java:220)
+	at redis.clients.jedis.Connection.readProtocolWithCheckingBroken(Connection.java:318)
+	at redis.clients.jedis.Connection.getStatusCodeReply(Connection.java:236)
+	at redis.clients.jedis.BinaryJedis.auth(BinaryJedis.java:2229)
+	at redis.clients.jedis.JedisFactory.makeObject(JedisFactory.java:119)
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:889)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:424)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:349)
+	at redis.clients.jedis.util.Pool.getResource(Pool.java:50)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:234)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:15)
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.fetchJedisConnector(JedisConnectionFactory.java:272)
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.getConnection(JedisConnectionFactory.java:476)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:134)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:97)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:84)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:215)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:188)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:96)
+	at org.springframework.data.redis.core.DefaultValueOperations.set(DefaultValueOperations.java:236)
+	at org.springframework.data.redis.core.DefaultBoundValueOperations.set(DefaultBoundValueOperations.java:140)
+	at com.example.one.controller.RedisController.hello(RedisController.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[TID: ] 2020-09-10 16:44:39.252 INFO  --- [ExecutorConfigurationSupport.java:218] [SpringContextShutdownHook] - Shutting down ExecutorService 'applicationTaskExecutor'
+[TID: ] 2020-09-10 16:44:39.257 INFO  --- [DruidDataSource.java:2003] [SpringContextShutdownHook] - {dataSource-1} closing ...
+[TID: ] 2020-09-10 16:44:39.265 INFO  --- [DruidDataSource.java:2075] [SpringContextShutdownHook] - {dataSource-1} closed

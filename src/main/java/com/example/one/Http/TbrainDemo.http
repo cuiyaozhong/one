@@ -1,0 +1,672 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+### 托运货架去某地并放下
+POST / HTTP/1.1
+Host: 192.168.10.7:8081
+Content-Type: application/json
+
+{
+  "id": "geekCode_geekWarehouseCode_001",
+  "msgType": "RobotTaskRequestMsg",
+  "request": {
+    "header": {
+    "requestId": "8b3c2fb8-928c-4f0a-af15-2740913e43fa",
+      "clientCode": "geekCode",
+    "warehouseCode": "geekWarehouseCode",
+    "userId": "admin",
+    "userKey": "123456",
+      "language": "en_us",
+      "version": "3.3.0"
+  }, "body": {
+    "taskType": "DELIVER_SHELF",
+      "shelfCode": "A00001",
+      "instruction": "GO_RETURN",
+      "destCellCode":"600045"
+  }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###
+### 移动到某地等待更新
+POST / HTTP/1.1
+Host: 192.168.10.7:8081
+Content-Type: application/json
+
+{
+  "id": "geekCode_geekWarehouseCode_001",
+  "msgType": "RobotTaskRequestMsg",
+  "request": {
+  "header": {
+    "requestId": "8b3c2fb8-928c-4f0a-af15-2740913e43fa",
+    "clientCode": "geekCode",
+    "warehouseCode": "geekWarehouseCode",
+    "userId": "admin",
+    "userKey": "123456",
+    "language": "en_us",
+    "version": "3.3.0"
+  }, "body": {
+    "taskType": "GO_WORK",
+      "instruction": "GO_NEXT",
+      "destCellCode":"07450775"
+  }
+  }
+}
+
+### 更新goWork，任务结束
+POST / HTTP/1.1
+Host: 192.168.10.7:8081
+Content-Type: application/json
+
+{
+  "id": "geekCode_geekWarehouseCode_001",
+  "msgType": "RobotTaskUpdateRequestMsg",
+  "request": { "header": {
+    "requestId": "9beab88d-a407-4195-a1f8-ae3594c83924",
+    "clientCode": "geekCode",
+    "warehouseCode": "geekWarehouseCode",
+    "userId": "admin",
+    "userKey": "123456",
+    "language": "en_us",
+    "version": "3.3.0"
+  }, "body": {
+    "taskId": 94,
+    "instruction": "GO_NEXT",
+    "destCellCode": "07450765",
+    "isContinue": 0
+  } }
+}
+
+### 移动到某地任务结束
+POST / HTTP/1.1
+Host: 192.168.10.7:8081
+Content-Type: application/json
+
+{
+  "id": "geekCode_geekWarehouseCode_001",
+  "msgType": "RobotTaskRequestMsg",
+  "request": {
+  "header": {
+    "requestId": "9194E002AD324176974AE9438A011EE3",
+    "clientCode": "geekCode",
+    "warehouseCode": "geekWarehouseCode",
+    "userId": "admin",
+    "userKey": "123456",
+    "language": "en_us",
+    "version": "3.3.0"
+  }, "body": {
+    "taskType": "GO_SOMEWHERE_TO_STAY",
+      "robotId": 5100025,
+      "instruction": "GO_SOMEWHERE_TO_STAY",
+    "destCellCode": "07550775"
+    }
+} }
+
+
+
+### 搬运款箱去某地并负载
+POST / HTTP/1.1
+Host: 192.168.10.7:8081
+Content-Type: application/json
+
+{
+  "id": "geekCode_geekWarehouseCode_001",
+  "msgType": "RobotTaskRequestMsg",
+  "request": {
+  "header": {
+    "requestId": "8b3c2fb8-928c-4f0a-af15-2740913e43fa",
+    "clientCode": "geekCode",
+    "warehouseCode": "geekWarehouseCode",
+    "userId": "admin",
+    "userKey": "123456",
+    "language": "en_us",
+    "version": "3.3.0"
+  }, "body": {
+    "taskType": "DELIVER_BOX",
+    "instruction": "GO_FETCH",
+    "boxCode":"A00000001",
+    "destCellCode":"08050775"
+  } }
+}
+
+### 任务更新搬运款箱去某地等待任务更新
+POST / HTTP/1.1
+Host: 192.168.10.7:8081
+Content-Type: application/json
+
+{
+  "id": "geekCode_geekWarehouseCode_001",
+  "msgType": "RobotTaskUpdateRequestMsg",
+  "request": {
+  "header": {
+    "requestId": "8b3c2fb8-928c-4f0a-af15-2740913e43fa",
+    "clientCode": "geekCode",
+    "warehouseCode": "geekWarehouseCode",
+    "userId": "admin",
+    "userKey": "123456",
+    "language": "en_us",
+    "version": "3.3.0"
+  }, "body": {
+    "taskId": 97,
+    "instruction": "GO_NEXT",
+      "destCellCode":"07750775",
+    "isContinue": 1
+    }
+} }
+
+### 更新任务搬运款箱去某地并卸载
+POST / HTTP/1.1
+Host: 192.168.10.7:8081
+Content-Type: application/json
+
+{
+  "id": "geekCode_geekWarehouseCode_001",
+  "msgType": "RobotTaskUpdateRequestMsg", "request": {
+  "header": {
+    "requestId": "629ef636-a97d-4043-a8e5-6547d6e6ca2c", "clientCode": "geekCode",
+    "warehouseCode": "geekWarehouseCode",
+    "userId": "admin",
+    "userKey": "123456",
+    "language": "en_us",
+    "version": "3.3.0"
+  }, "body": {
+    "taskId": 101,
+    "instruction": "GO_RETURN",
+    "latticeCode": "L0000001"
+  } }
+}
+
+### 更新款箱信息
+POST / HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+
+{
+  "id": "geekCode_geekWarehouseCode_001",
+  "msgType": "RobotTaskUpdateRequestMsg",
+  "request": {
+  "header": {
+    "requestId": "9beab88d-a407-4195-a1f8-ae3594c83924",
+    "clientCode": "geekCode",
+    "warehouseCode": "geekWarehouseCode",
+    "userId": "admin",
+    "userKey": "123456",
+    "language": "en_us",
+    "version": "3.3.0"
+  }, "body": {
+    "taskId": 6879,
+    "taskType": "DELIVER_BOX",
+      "instruction": "UPDATE_BOX",
+      "boxOrder": "REMOVE",
+      "boxCode": "R000002",
+      "placeLatticeCode": "L0000002"
+  } }
+}
+
+
+### 搬运款箱去某地并卸载
+POST / HTTP/1.1
+Host: 192.168.10.3:8895
+Content-Type: application/json
+
+{
+  "id": "geekCode_geekWarehouseCode_001",
+  "msgType": "RobotTaskRequestMsg",
+  "request": {
+  "header": {
+    "requestId": "15a3eb48-1e12-4839-71cb54",
+    "clientCode": "geekCode",
+    "warehouseCode": "geekWarehouseCode",
+    "userId": "admin",
+    "userKey": "123456",
+    "language": "en_us",
+    "version": "3.3.0"
+  },
+    "body": {
+    "taskType": "DELIVER_BOX",
+      "instruction": "GO_RETURN",
+      "boxCode":"A0000001",
+      "latticeCode":"K0000095"
+  }
+  }
+}
+
+### 周转箱搬走/加入后通知机械臂系统(金库系统->机械臂系统)
+POST / HTTP/1.1
+Host: 192.168.1.6:23412
+Content-Type: application/json
+
+{
+  "id": "zjft_001",
+  "msgType": "TbrainToArmRequestMsg",
+  "request": {
+    "header": {
+      "requestId": "9194E002AD324176974AE9438A011EE3"
+    },
+    "body": {
+      "taskType": "BOX_REMOVE_JOIN",
+      "operationType": "join",
+      "passBoxNo": "R000009",
+      "locationNo": "1"
+    }
+  }
+}
+
+
+### 空载去某地并等待
+POST / HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+
+{
+  "id": "geekCode_geekWarehouseCode_001",
+  "msgType": "RobotTaskRequestMsg",
+  "request": {
+  "header": {
+    "requestId": "8b3c2fb8-928c-4f0a-af15-2740913e43fa",
+    "clientCode": "geekCode",
+    "warehouseCode": "geekWarehouseCode",
+    "userId": "admin",
+    "userKey": "123456",
+    "language": "en_us",
+    "version": "3.3.0"
+  }, "body": {
+    "taskType": "DELIVER_BOX",
+      "instruction": "GO_NEXT",
+      "stationId":1
+  } }
+}
+
+
+### 更新款箱
+POST / HTTP/1.1
+Host: 192.168.10.7:8081
+Content-Type: application/json
+
+{
+  "id": "geekCode_geekWarehouseCode_001",
+  "msgType": "RobotTaskUpdateRequestMsg",
+  "request": {
+  "header": {
+    "requestId": "9beab88d-a407-4195-a1f8-ae3594c83924",
+    "clientCode": "geekCode",
+    "warehouseCode": "geekWarehouseCode",
+    "userId": "admin",
+    "userKey": "123456",
+    "language": "en_us",
+    "version": "3.3.0"
+  }, "body": {
+    "taskId": 97,
+    "taskType": "DELIVER_BOX",
+      "instruction": "UPDATE_BOX",
+      "boxOrder": "EXCHANGE",
+      "boxCode": "A00000001",
+      "placeLatticeCode": "L0000001"
+  }
+  }
+}
+
+
+
+### 取消任务
+POST / HTTP/1.1
+Host: 192.168.66.70:8895
+Content-Type: application/json
+
+{
+  "id": "geekCode_geekWarehouseCode_001",
+  "msgType": "RobotTaskUpdateRequestMsg",
+  "request": {
+  "header": {
+    "requestId": "8b3c2fb8-928c-4f0a-af15-2740913e4357",
+    "clientCode": "geekCode",
+    "warehouseCode": "geekWarehouseCode",
+    "userId": "admin",
+    "userKey": "123456",
+    "language": "en_us",
+    "version": "3.3.0"
+  }, "body": {
+    "taskId": 7729,
+      "instruction": "CANCEL",
+      "cancelAction": 0,
+      "latticeCode": "L0000026"
+  } }
+}
+
+
+
+
+### 取消动作
+POST / HTTP/1.1
+Host: 192.168.10.7:8081
+Content-Type: application/json
+
+{
+  "id": "geekCode_geekWarehouseCode_001",
+  "msgType": "RobotTaskUpdateRequestMsg",
+  "request": {
+  "header": {
+    "requestId": "8b3c2fb8-928c-4f1a-af15-2740913e43fa",
+    "clientCode": "geekCode",
+    "warehouseCode": "geekWarehouseCode",
+    "userId": "admin",
+    "userKey": "123456",
+    "language": "en_us",
+    "version": "3.3.0"
+  }, "body": {
+    "taskId": 101,
+    "instruction": "CANCEL_INSTRUCTION"
+    }
+}
+}
+
+### 加入货箱
+POST / HTTP/1.1
+Host: 192.168.10.3:8895
+Content-Type: application/json
+
+{
+  "id": "geekCode_geekWarehouseCode_001",
+  "msgType": "WarehouseInstructionRequestMsg",
+  "request": {
+  "header": {
+    "requestId": "285ceeaa-b113-410b-a8e8-b9d73fed0971",
+    "clientCode": "geekCode",
+    "warehouseCode": "geekWarehouseCode",
+    "userId": "admin",
+    "userKey": "123456",
+    "language": "en_us",
+    "version": "3.3.0"
+  },
+    "body": {
+    "instruction": "ADD_BOX",
+      "boxCode": "A0000001",
+      "latticeCode":"M005-R1-L3",
+    "placeLatticeCode": "M005-R1-L3" }
+}
+}
+
+### 移除货箱
+POST / HTTP/1.1
+Host: 192.168.10.3:8895
+Content-Type: application/json
+
+{
+  "id": "geekCode_geekWarehouseCode_001",
+  "msgType": "WarehouseInstructionRequestMsg",
+  "request": {
+    "header": {
+      "requestId": "285ceeaa-b513-41ww-a8e8-b9d11",
+      "clientCode": "geekCode",
+      "warehouseCode": "geekWarehouseCode",
+      "userId": "admin",
+      "userKey": "123456",
+      "language": "en_us",
+      "version": "3.3.0"
+    },
+    "body": {
+      "instruction": "REMOVE_BOX",
+      "boxCode": "A0000001"
+    }
+  } }
+
+### 任务暂停
+POST / HTTP/1.1
+Host: 192.168.10.7:8081
+Content-Type: application/json
+
+{
+  "id": "geekCode_geekWarehouseCode_001", "msgType": "WarehouseInstructionRequestMsg", "request": {
+  "header": {
+    "requestId": "c39af3cf-0599-49fd-9c9f-8ba9ce78e69r", "clientCode": "geekCode",
+    "warehouseCode": "geekWarehouseCode",
+    "userId": "admin",
+    "userKey": "123456",
+    "language": "en_us",
+    "version": "3.3.0"
+  }, "body": {
+    "instruction": "TASK_STOP" }
+} }
+
+### 任务恢复
+POST / HTTP/1.1
+Host: 192.168.10.7:8081
+Content-Type: application/json
+
+{
+  "id": "geekCode_geekWarehouseCode_001", "msgType": "WarehouseInstructionRequestMsg", "request": {
+  "header": {
+    "requestId": "c39af3cf-0599-49fd-9c9f-8ba9ce78e69r", "clientCode": "geekCode",
+    "warehouseCode": "geekWarehouseCode",
+    "userId": "admin",
+    "userKey": "123456",
+    "language": "en_us",
+    "version": "3.3.0"
+  }, "body": {
+    "instruction": "TASK_RECOVER" }
+} }
+
+
+### 加入货架
+POST / HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+
+{
+  "id": "geekCode_geekWarehouseCode_001",
+  "msgType": "WarehouseInstructionRequestMsg",
+  "request": {
+  "header": {
+    "requestId": "g39af3cf-0599-49fd-9c9f-8ba9ce78e69c",
+    "clientCode": "geekCode",
+    "warehouseCode": "geekWarehouseCode",
+    "userId": "admin",
+    "userKey": "123456",
+    "language": "en_us",
+    "version": "3.3.0"
+  }, "body": {
+    "shelfCode": "R000004",
+    "instruction": "ADD_SHELF",
+      "locationCellCode": "L0000004",
+      "placementCellCode": "L0000004"
+  } }
+}
+
+
+
+### 移除货架
+POST / HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+
+{
+  "id": "geekCode_geekWarehouseCode_001",
+  "msgType": "WarehouseInstructionRequestMsg",
+  "request": {
+  "header": {
+    "requestId": "w39af3cf-0599-49fd-9c9f-8ba9ce78e691",
+    "clientCode": "geekCode",
+    "warehouseCode": "geekWarehouseCode",
+    "userId": "admin",
+    "userKey": "123456",
+    "language": "en_us",
+    "version": "3.3.0"
+  }, "body": {
+    "shelfCode": "R0000001",
+    "instruction": "REMOVE_SHELF"
+    }
+} }
+
+
+### 系统急停
+POST / HTTP/1.1
+Host: 192.168.10.7:8081
+Content-Type: application/json
+
+{
+  "id": "geekCode_geekWarehouseCode_001",
+  "msgType": "WarehouseInstructionRequestMsg",
+  "request": {
+  "header": {
+    "requestId": "c39af3cf-0599-49fd-9c9f-8ba9ce78e69d",
+    "clientCode": "geekCode",
+    "warehouseCode": "geekWarehouseCode",
+    "userId": "admin",
+    "userKey": "123456",
+    "language": "en_us",
+    "version": "3.3.0"
+  }, "body": {
+    "instruction": "SYSTEM_STOP",
+      "areaIds": [10001]
+    }
+} }
+
+### 系统恢复
+POST / HTTP/1.1
+Host: 192.168.10.7:8081
+Content-Type: application/json
+
+{
+  "id": "geekCode_geekWarehouseCode_001", "msgType": "WarehouseInstructionRequestMsg", "request": {
+  "header": {
+    "requestId": "c39af3cf-0599-49fd-9c9f-8ba9ce78e69e", "clientCode": "geekCode",
+    "warehouseCode": "geekWarehouseCode",
+    "userId": "admin",
+    "userKey": "123456",
+    "language": "en_us",
+    "version": "3.3.0"
+  }, "body": {
+    "instruction": "SYSTEM_RECOVER" ,
+    "areaIds": [10001]
+  }
+} }
+
+
+### 移除机器人
+POST / HTTP/1.1
+Host: 192.168.10.7:8081
+Content-Type: application/json
+
+{
+  "id": "geekCode_geekWarehouseCode_001",
+  "msgType": "WarehouseInstructionRequestMsg",
+  "request": {
+  "header": {
+    "requestId": "d39af3cf-0599-49fd-9c9f-8ba9ce78e69c",
+    "clientCode": "geekCode",
+    "warehouseCode": "geekWarehouseCode",
+    "userId": "admin",
+    "userKey": "123456",
+    "language": "en_us",
+    "version": "3.3.0"
+  }, "body": {
+    "instruction": "REMOVE_ROBOT",
+    "robotId": 5100025
+    }
+}
+}
+
+### 加入机器人
+POST / HTTP/1.1
+Host: 192.168.10.7:8081
+Content-Type: application/json
+
+{
+  "id": "geekCode_geekWarehouseCode_001", "msgType": "WarehouseInstructionRequestMsg", "request": {
+  "header": {
+    "requestId": "f39af3df-0599-49fd-9c9f-8ba9ce78e69c", "clientCode": "geekCode",
+    "warehouseCode": "geekWarehouseCode",
+    "userId": "admin",
+    "userKey": "123456",
+    "language": "en_us",
+    "version": "3.3.0"
+  }, "body": {
+    "instruction": "RECOVER_ROBOT",
+    "robotId": 5100025
+  }
+}
+}
+
+###
+POST / HTTP/1.1
+Host: 10.2.78.100:8000
+Content-Type: application/json
+
+{
+  "imageID": "1043",
+  "weight": 4.2
+}
+
+### 搬运货架
+POST / HTTP/1.1
+Host: 192.168.10.3:8895
+Content-Type: application/json
+
+{
+  "id": "geekCode_geekWarehouseCode_001",
+  "msgType": "RobotTaskRequestMsg",
+  "request": {
+    "header": {
+    "requestId": "8b3c2fb8-928c-4f0a-af15-2740913e4388",
+      "clientCode": "geekCode",
+    "warehouseCode": "geekWarehouseCode",
+    "userId": "admin",
+    "userKey": "123456",
+      "language": "en_us",
+      "version": "3.3.0"
+  }, "body": {
+    "taskType": "DELIVER_SHELF",
+      "shelfCode": "00005004",
+      "instruction": "GO_RETURN",
+      "destCellCode":"02350675"
+  } }
+}
+
+###
+
+
+
+
+
+

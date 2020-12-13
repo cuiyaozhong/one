@@ -1,0 +1,26 @@
+[TID: ] 2020-09-09 20:55:41.571 INFO  --- [StartupInfoLogger.java:55] [main] - Starting OneApplication on cuiyaozhongdeMacBook-Pro.local with PID 749 (/Users/cuiyaozhong/software/ideapace/one/target/classes started by cuiyaozhong in /Users/cuiyaozhong/software/ideapace/one)
+[TID: ] 2020-09-09 20:55:41.575 DEBUG --- [StartupInfoLogger.java:56] [main] - Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+[TID: ] 2020-09-09 20:55:41.576 INFO  --- [SpringApplication.java:651] [main] - No active profile set, falling back to default profiles: default
+[TID: ] 2020-09-09 20:55:42.549 INFO  --- [RepositoryConfigurationDelegate.java:249] [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+[TID: ] 2020-09-09 20:55:42.554 INFO  --- [RepositoryConfigurationDelegate.java:127] [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[TID: ] 2020-09-09 20:55:42.596 INFO  --- [RepositoryConfigurationDelegate.java:187] [main] - Finished Spring Data repository scanning in 17ms. Found 0 Redis repository interfaces.
+[TID: ] 2020-09-09 20:55:42.878 INFO  --- [PostProcessorRegistrationDelegate.java:335] [main] - Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[TID: ] 2020-09-09 20:55:43.023 INFO  --- [PostProcessorRegistrationDelegate.java:335] [main] - Bean 'spring.datasource.druid-com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties' of type [com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[TID: ] 2020-09-09 20:55:43.030 INFO  --- [PostProcessorRegistrationDelegate.java:335] [main] - Bean 'advisor' of type [org.springframework.aop.support.RegexpMethodPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[TID: ] 2020-09-09 20:55:43.301 INFO  --- [TomcatWebServer.java:91] [main] - Tomcat initialized with port(s): 8080 (http)
+[TID: ] 2020-09-09 20:55:43.397 INFO  --- [ServletWebServerApplicationContext.java:284] [main] - Root WebApplicationContext: initialization completed in 1762 ms
+[TID: ] 2020-09-09 20:55:43.524 INFO  --- [DruidDataSourceAutoConfigure.java:56] [main] - Init DruidDataSource
+[TID: ] 2020-09-09 20:55:43.863 INFO  --- [DruidDataSource.java:1010] [main] - {dataSource-1} inited
+[TID: ] 2020-09-09 20:55:44.519 INFO  --- [PropertySourcedRequestMappingHandlerMapping.java:69] [main] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[TID: ] 2020-09-09 20:55:44.630 INFO  --- [ExecutorConfigurationSupport.java:181] [main] - Initializing ExecutorService 'applicationTaskExecutor'
+[TID: ] 2020-09-09 20:55:44.697 INFO  --- [WelcomePageHandlerMapping.java:58] [main] - Adding welcome page template: index
+[TID: ] 2020-09-09 20:55:44.895 INFO  --- [DocumentationPluginsBootstrapper.java:151] [main] - Context refreshed
+[TID: ] 2020-09-09 20:55:44.916 INFO  --- [DocumentationPluginsBootstrapper.java:154] [main] - Found 1 custom documentation plugin(s)
+[TID: ] 2020-09-09 20:55:44.943 INFO  --- [ApiListingReferenceScanner.java:41] [main] - Scanning for api listing references
+[TID: ] 2020-09-09 20:55:45.091 INFO  --- [TomcatWebServer.java:203] [main] - Tomcat started on port(s): 8080 (http) with context path ''
+[TID: ] 2020-09-09 20:55:45.094 INFO  --- [StartupInfoLogger.java:61] [main] - Started OneApplication in 4.214 seconds (JVM running for 6.029)
+[TID: ] 2020-09-09 20:56:13.346 INFO  --- [FrameworkServlet.java:525] [http-nio-8080-exec-1] - Initializing Servlet 'dispatcherServlet'
+[TID: ] 2020-09-09 20:56:13.354 INFO  --- [FrameworkServlet.java:547] [http-nio-8080-exec-1] - Completed initialization in 8 ms
+[TID: ] 2020-09-09 20:57:56.455 INFO  --- [ExecutorConfigurationSupport.java:218] [SpringContextShutdownHook] - Shutting down ExecutorService 'applicationTaskExecutor'
+[TID: ] 2020-09-09 20:57:56.457 INFO  --- [DruidDataSource.java:2003] [SpringContextShutdownHook] - {dataSource-1} closing ...
+[TID: ] 2020-09-09 20:57:56.466 INFO  --- [DruidDataSource.java:2075] [SpringContextShutdownHook] - {dataSource-1} closed
